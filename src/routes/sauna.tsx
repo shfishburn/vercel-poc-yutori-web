@@ -75,7 +75,7 @@ function SaunaPage() {
   const [cartError, setCartError] = useState<string | null>(null);
 
   const images: ShopifyImage[] = [
-    { url: '/images/sauna/001-sauna-close.png', altText: 'Pulse Sauna exterior' },
+    { url: '/images/sauna/001-sauna-close.png', altText: 'Pulse Sauna clear-cedar exterior with glass door and Saunum heater' },
   ];
   const { checkoutVariantId } = resolveCheckoutVariant({
     variants,
