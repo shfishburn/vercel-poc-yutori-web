@@ -74,7 +74,13 @@ function SaunaPage() {
   const { addItem, loading: cartLoading } = useCart();
   const [cartError, setCartError] = useState<string | null>(null);
 
-  const images: ShopifyImage[] = product?.images?.edges.map((e) => e.node) ?? [];
+  const staticImages: ShopifyImage[] = [
+    { url: '/images/sauna/001-sauna-close.png', altText: 'Pulse Sauna exterior' },
+  ];
+  const images: ShopifyImage[] = [
+    ...staticImages,
+    ...(product?.images?.edges.map((e) => e.node) ?? []),
+  ];
   const { checkoutVariantId } = resolveCheckoutVariant({
     variants,
     fallbackEnvKeys: [
