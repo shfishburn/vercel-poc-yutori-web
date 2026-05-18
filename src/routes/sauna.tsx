@@ -69,17 +69,13 @@ export const Route = createFileRoute('/sauna')({
 /* ── Page ───────────────────────────────────────────────────── */
 
 function SaunaPage() {
-  const { product, variants, loaderError } = Route.useLoaderData();
+  const { variants, loaderError } = Route.useLoaderData();
   const navigate = useNavigate();
   const { addItem, loading: cartLoading } = useCart();
   const [cartError, setCartError] = useState<string | null>(null);
 
-  const staticImages: ShopifyImage[] = [
-    { url: '/images/sauna/001-sauna-close.png', altText: 'Pulse Sauna exterior' },
-  ];
   const images: ShopifyImage[] = [
-    ...staticImages,
-    ...(product?.images?.edges.map((e) => e.node) ?? []),
+    { url: '/images/sauna/001-sauna-close.png', altText: 'Pulse Sauna exterior' },
   ];
   const { checkoutVariantId } = resolveCheckoutVariant({
     variants,
