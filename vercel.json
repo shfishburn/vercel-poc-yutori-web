@@ -6,6 +6,16 @@
       "includeFiles": "dist/server/**"
     }
   },
+  "redirects": [
+    { "source": "/sauna", "destination": "https://yutoriforge.com/sauna", "permanent": true },
+    { "source": "/products/pulse-sauna", "destination": "https://yutoriforge.com/sauna", "permanent": true },
+    { "source": "/products/yukansauna", "destination": "https://yutoriforge.com/sauna", "permanent": true },
+    { "source": "/products/pulse-plunge", "destination": "https://yutoriforge.com/plunge", "permanent": true },
+    { "source": "/products/plunge", "destination": "https://yutoriforge.com/plunge", "permanent": true },
+    { "source": "/products/pulse-shower", "destination": "https://yutoriforge.com/shower", "permanent": true },
+    { "source": "/products/pulse-contrast-bundle", "destination": "https://yutoriforge.com/", "permanent": true },
+    { "source": "/(.*)", "destination": "https://yutoriforge.com/", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/sitemap.xml",
